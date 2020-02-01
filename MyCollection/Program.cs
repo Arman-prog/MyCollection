@@ -27,29 +27,34 @@ namespace MyCollection
             {
                 Console.WriteLine(digit);
             }
-
-
-
-            Student st1 = new Student { FirstName = "Gexam", Lastname = "Hovhannisyan", BirthDate = new DateTime(1994, 09, 25) };
-            Student st2 = new Student { FirstName = "Arsen", Lastname = "Vardanyan", BirthDate = new DateTime(1998, 07, 13) };
-            Student st3 = new Student { FirstName = "Davit", Lastname = "Karapetyan", BirthDate = new DateTime(2000, 11, 10) };
-
-            MyCollection<Student> students = new MyCollection<Student> { st1, st2 };
-            students.Add(st3);
-            Console.WriteLine($"students count: {students.Count}\n");
-
-            students.Print();
-
-            students.Remove(st2);
-
-            Console.WriteLine($"students count: {students.Count}\n");
-            students.Add(new Student { FirstName = "Aram", Lastname = "Vardanyan", BirthDate = new DateTime(1988, 08, 23) });
-            Console.WriteLine($"students count: {students.Count}\n");
-
-            foreach (Student st in students)
+            Console.WriteLine(new string('-',20));
+            int[] numbers = new int[5];
+            digits.CopyTo(numbers, 0);
+            foreach (int item in numbers)
             {
-                Console.WriteLine(st);
+                Console.WriteLine(item);
             }
+
+            //Student st1 = new Student { FirstName = "Gexam", Lastname = "Hovhannisyan", BirthDate = new DateTime(1994, 09, 25) };
+            //Student st2 = new Student { FirstName = "Arsen", Lastname = "Vardanyan", BirthDate = new DateTime(1998, 07, 13) };
+            //Student st3 = new Student { FirstName = "Davit", Lastname = "Karapetyan", BirthDate = new DateTime(2000, 11, 10) };
+
+            //MyCollection<Student> students = new MyCollection<Student> { st1, st2 };
+            //students.Add(st3);
+            //Console.WriteLine($"students count: {students.Count}\n");
+
+            //students.Print();
+
+            //students.Remove(st2);
+
+            //Console.WriteLine($"students count: {students.Count}\n");
+            //students.Add(new Student { FirstName = "Aram", Lastname = "Vardanyan", BirthDate = new DateTime(1988, 08, 23) });
+            //Console.WriteLine($"students count: {students.Count}\n");
+
+            //foreach (Student st in students)
+            //{
+            //    Console.WriteLine(st);
+            //}
 
         }
     }

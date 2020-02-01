@@ -82,7 +82,12 @@ namespace MyCollection
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            MyCollection<T> temp = First;
+            while (temp!=null&&arrayIndex<array.Length)
+            {
+                array[arrayIndex++] = temp.value;
+                temp = temp.Next;
+            }
         }
 
         public IEnumerator<T> GetEnumerator()
